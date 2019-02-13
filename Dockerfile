@@ -8,7 +8,7 @@ ARG KUBECTL_VERSION=v1.13.3
 ARG HELM_VERSION=v2.12.3
 
 # install dependencies
-RUN apk add --no-cache ca-certificates tar wget openssl python bash
+RUN apk add --no-cache ca-certificates tar wget openssl python bash docker
 RUN mkdir /opt
 
 # install gcloud
