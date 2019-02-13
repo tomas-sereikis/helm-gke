@@ -1,14 +1,14 @@
-FROM alpine:3.7
+FROM docker:18.09.2
 MAINTAINER Tomas Sereikis
 
-ARG GCLOUD_VERSION=228.0.0
+ARG GCLOUD_VERSION=234.0.0
 # https://aur.archlinux.org/packages/kubectl-bin/
 ARG KUBECTL_VERSION=v1.13.3
 # https://github.com/kubernetes/helm/releases
 ARG HELM_VERSION=v2.12.3
 
 # install dependencies
-RUN apk add --no-cache ca-certificates tar wget openssl python bash docker
+RUN apk add --no-cache tar wget openssl python bash
 RUN mkdir /opt
 
 # install gcloud
